@@ -1,0 +1,40 @@
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav {
+    border-bottom: 2px solid grey;
+}
+
+.navUl {
+    display: flex;
+    flex-direction: row;
+    place-items: center;
+    gap: 1.5rem;
+    text-transform: uppercase;
+    justify-content: space-evenly;
+}
+
+.main {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 16px;
+    background-color: whitesmoke;
+    border-radius: 16px;
+}
+
+.displayAllFlowers {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.flowerCard {
+    min-width: 320px;
+    padding: 8px 20px 0px 20px;
+}
+
+.flowerCard p {
+    font-size: 1.25rem;
+}
