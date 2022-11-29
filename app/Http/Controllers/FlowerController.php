@@ -9,7 +9,6 @@ class FlowerController extends Controller
 {
     public function index()
     {
-
         $flowers = DB::table('flowers')->get();
         return view('flowers', ['flowers' => $flowers]);
     }

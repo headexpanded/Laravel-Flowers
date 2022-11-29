@@ -17,14 +17,24 @@
             return <p>No flowers in db.</p>
         @else
             @foreach ($flowers as $flower)
-                <div class="flowerCard">
-                    <p>Name: {{ $flower->name }}</p>
-                    <p>Price: $ {{ $flower->price }}</p>
-                    <p><a href="/flowers/{{ $flower->id }}">Details</a></p>
-                    <div>
-                        <hr>
+                <dl>
+
+                    <div class="flowerCard">
+
+                        <dt class="dt">
+                            <p>Name: {{ $flower->name }}</p>
+                        </dt>
+                        <dd class="dd">
+                            <p>Price: $ {{ $flower->price }}</p>
+                            <p><a href="/flowers/{{ $flower->id }}">Details</a></p>
+                        </dd>
+
+
+                        <div>
+                            <hr>
+                        </div>
                     </div>
-                </div>
+                </dl>
             @endforeach
     </div>
     @endif

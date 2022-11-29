@@ -1,5 +1,6 @@
 body {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgba(255, 208, 0, 0.88);
 }
 
 .nav {
@@ -8,7 +9,8 @@ body {
 
 .navUl {
     display: flex;
-    flex-direction: row;
+    flex-flow: row;
+    font-weight: 600;
     place-items: center;
     gap: 1.5rem;
     text-transform: uppercase;
@@ -20,7 +22,27 @@ body {
     max-width: 800px;
     padding: 16px;
     background-color: whitesmoke;
+    border: 1px #999 solid;
     border-radius: 16px;
+}
+
+.dt {
+    font-weight: bold;
+}
+
+.dl,
+.dd {
+    font-size: 0.9rem;
+    margin: 0px;
+}
+
+.dd {
+    padding-bottom: 1em;
+}
+
+.main h2 {
+    text-transform: uppercase;
+    font-size: 1.2rem;
 }
 
 .displayAllFlowers {
