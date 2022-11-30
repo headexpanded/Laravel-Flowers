@@ -100,12 +100,13 @@ li {
     max-width: 800px;
     padding: 16px;
     background-color: whitesmoke;
-    border: 1px #999 solid;
+    border: 1px rgba(58, 223, 113, 0.653) solid;
     border-radius: 16px;
 }
 
 .dt {
     font-weight: bold;
+    color: rgb(80, 80, 80);
     float: left;
     width: 100%;
     padding-right: 4px;
@@ -122,8 +123,9 @@ li {
 }
 
 .main h2 {
-    text-transform: uppercase;
+    color: rgb(80, 80, 80);
     font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 .displayAllFlowers {
@@ -139,7 +141,7 @@ li {
 }
 
 .flowerCard {
-    border-bottom: 1px solid #999;
+    /* border-bottom: 1px solid #999; */
     box-shadow: 1px 1px #999;
     min-width: 320px;
     padding: 2px 20px;
@@ -171,7 +173,6 @@ li {
 ._flowerDetailNav {
     display: flex;
     flex-flow: row;
-
     align-items: center;
     padding: 0;
     margin: 0;
