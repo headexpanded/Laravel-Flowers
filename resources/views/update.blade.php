@@ -7,26 +7,26 @@
         <div class="alert alert-fail">{{ session('message') }}</div>
     @endif
 
-    <div style="width:800px; margin:0 auto; background:whitesmoke;padding: 20px 0px; ">
-        @if ($errors->any())
-            <div style="padding:16px 0px;">
-                <div class="alert alert-danger">
-                    <ul
-                        style="display:flex; flex-flow:column; place-items: center;list-style-type: none; color: red; margin:0; font-size:1.5em;">
-                        @foreach ($errors->all() as $error)
-                            <li style="padding-bottom: 12px;">{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            </div>
-        @endif
-        <form style="display:flex; flex-direction: column; place-items: center; gap: 1.5rem;" method="post">
+    <div class="_divNewFlowerForm">
+
+        <form class="_FlowerForm" method="post">
             @csrf
             <label for="name">Change Flower Name</label>
             <input type="text" name="name" value="{{ $flower->name }} "placeholder="{{ $flower->name }}">
             <label for="price">Change Flower Price</label>
             <input type="text" name="price" value="{{ $flower->price }}"placeholder={{ $flower->price }}>
-            <input type="submit" value="Update">
+            <input class="_formInputSubmit" type="submit" value="Update">
         </form>
+        @if ($errors->any())
+            <div class="_divFlowerEditUpdate">
+                <div class="alert alert-danger">
+                    <ul class="_ulFlowerEditUpdate">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
+        @endif
     </div>
 @endsection

@@ -160,7 +160,7 @@ return [
             'alpha' => 'Try using this thing called THE ALPHABET to enter a name.'
         ],
         'price' => [
-            'required' => 'How do we know what to charge if you dont enter a price, duh.',
+            'required' => 'How do we know what to charge if you don\'t enter a price, duh.',
             'numeric' => 'Are prices not numbers in your world, dickhead?'
         ],
 

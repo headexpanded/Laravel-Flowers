@@ -2,21 +2,24 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Flower;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Response;
+use Illuminate\Support\Facades\DB;
 
 class FlowerController extends Controller
 {
     public function index()
     {
-        $flowers = DB::table('flowers')->get();
+        $flowers = Flower::all();
         return view('flowers', ['flowers' => $flowers]);
     }
 
     public function show($id)
     {
-        $flower = DB::table('flowers')->where('id', $id)->first();
+        $flower = Flower::where('id', $id)->first();
+
+        // $flower = DB::table('flowers')->where('id', $id)->first();
         return response(view('flower-detail', ['flower' => $flower]));
     }
 
@@ -29,19 +32,20 @@ class FlowerController extends Controller
     {
         // validate
         $validated = $request->validate([
-            'name' => ['required', 'string', 'alpha'],
+            'name' => ['required', 'string'],
             'price' => ['required', 'numeric'],
         ]);
 
-        $newFlower = DB::insert('INSERT INTO flowers (name, price) VALUES (?,?)', [$request->name, $request->price]);
+        $newFlower = new Flower;
+        $newFlower->name = $request->name;
+        $newFlower->price = $request->price;
+
         return ($newFlower) ? redirect('/flowers')->with('message', '<p style="display:flex; justify-content: center;"><span style="color:green; text-transform: uppercase; font-size: 1.25rem;">' . $request->name . ' : Insert Successful</span></p>') : back()->with('message', 'Insert Failed');
     }
 
     public function editFlowerDetails($id)
 
     {
-
-
         $flower = DB::table('flowers')->where('id', $id)->first();
         return view('update', ['flower' => $flower]);
     }
@@ -50,20 +54,24 @@ class FlowerController extends Controller
     {
         // validate
         $validated = $request->validate([
-            'name' => ['required', 'string', 'alpha'],
-            'price' => ['required', 'numeric'],
+            'name' => ['required', 'string'],
+            'price' => ['required', 'numeric', 'min:5'],
         ]);
+        $editedFlower = Flower::find($id);
+        $editedFlower->name = $request->name;
+        $editedFlower->price = $request->price;
+        $editedFlower->save();
 
-        $editedFlower = DB::table('flowers')
-            ->where('id', $id)
-            ->update(['name' => $request->name, 'price' => $request->price]);
         return ($editedFlower) ? redirect('/flowers')->with('message', '<p style="display:flex; justify-content: center;"><span style="color:green; text-transform: uppercase; font-size: 1.25rem;">' . $request->name . ' : Update Successful</span></p>') : back()->with('message', 'Update Failed');
     }
 
     public function deleteThisFlower($id)
     {
-        $deletedFlower = DB::table('flowers')
-            ->where('id', $id)->delete();
+        $deletedFlower = Flower::find($id);
+        $deletedFlower->delete();
+
+        // $deletedFlower = DB::table('flowers')
+        //     ->where('id', $id)->delete();
         return ($deletedFlower) ? redirect('/flowers')->with('message', '<p style="display:flex; justify-content: center;"><span style="color:green; text-transform: uppercase; font-size: 1.25rem;">   Delete Successful</span></p>') : redirect('/update')->with('message', 'Delete Failed');
     }
 
