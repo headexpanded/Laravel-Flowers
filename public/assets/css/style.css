@@ -4,6 +4,14 @@ body {
     background-color: rgba(255, 208, 0, 0.88);
 }
 
+a:hover {
+    cursor: pointer;
+}
+
+a:visited {
+    color: green;
+}
+
 li {
     padding-bottom: 12px;
 }
@@ -37,6 +45,28 @@ li {
 
 ._divFlowerEditUpdate {
     padding: 16px 0px;
+}
+
+._flowerEditUpdateMsg_OK {
+    display: flex;
+    justify-content: center;
+}
+
+._flowerEditUpdateMsg_OK span {
+    color: green;
+    text-transform: uppercase;
+    font-size: 1.25rem;
+}
+
+._flowerEditUpdateMsg_Not_OK {
+    display: flex;
+    justify-content: center;
+}
+
+._flowerEditUpdateMsg_Not_OK span {
+    color: red;
+    text-transform: uppercase;
+    font-size: 1.25rem;
 }
 
 ._ulFlowerEditUpdate {
@@ -103,9 +133,14 @@ li {
     gap: 0.5rem;
 }
 
+._flowerDetail {
+    display: flex;
+    flex-flow: row;
+}
+
 .flowerCard {
     border-bottom: 1px solid #999;
-    box-shadow: 2px 1px #999;
+    box-shadow: 1px 1px #999;
     min-width: 320px;
     padding: 2px 20px;
 }
@@ -114,6 +149,36 @@ li {
     font-size: 1.25rem;
 }
 
+.flowerCard a {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
 .flowerCard:hover {
     box-shadow: 2px 2px #999;
+}
+
+._flowerDesc {
+    padding: 16px 8px 8px 16px;
+}
+
+._flowerDesc h3 {
+    text-transform: uppercase;
+}
+
+._flowerDetailNav {
+    display: flex;
+    flex-flow: row;
+
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    gap: 44px;
+}
+
+._flowerDetailNav span {
+    padding: 0;
+    margin: 0;
 }

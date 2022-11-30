@@ -37,13 +37,13 @@ class FlowerController extends Controller
         $newFlower->price = $request->price;
         $newFlower->save();
 
-        return ($newFlower) ? redirect('/flowers')->with('message', '<p style="display:flex; justify-content: center;"><span style="color:green; text-transform: uppercase; font-size: 1.25rem;">' . $request->name . ' : Insert Successful</span></p>') : back()->with('message', 'Insert Failed');
+        return ($newFlower) ? redirect('/flowers')->with('message', '<p class="_flowerEditUpdateMsg_OK"><span>' . $request->name . ' : Insert Successful</span></p>') : back()->with('message', '<p class="_flowerEditUpdateMsg_Not_OK"><span>Insert Failed</span></p>');
     }
 
     public function editFlowerDetails($id)
 
     {
-        $flower = Flower::find($id)->first;
+        $flower = Flower::find($id);
         return view('update', ['flower' => $flower]);
     }
 
