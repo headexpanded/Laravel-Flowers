@@ -30,9 +30,7 @@
                         </dd>
 
 
-                        <div>
-                            <hr>
-                        </div>
+
                     </div>
                 </dl>
             @endforeach
