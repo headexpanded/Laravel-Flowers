@@ -10,7 +10,7 @@
         <div style="padding:16px 0px;">
             <div class="alert alert-danger">
                 <ul
-                    style="display:flex; flex-flow:row; justify-content: center;list-style-type: none; text-transform: uppercase; color: red; margin:0; font-size:1.5em;">
+                    style="display:flex; flex-flow:column; place-items: center;list-style-type: none; text-transform: uppercase; color: red; margin:0; font-size:1.2em;">
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
                     @endforeach
