@@ -1,5 +1,6 @@
 body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: "Inter", sans-serif;
     background-color: rgba(255, 208, 0, 0.88);
 }
 
@@ -27,7 +28,7 @@ li {
     background-color: #067ff7;
     color: white;
     font-size: 0.9em;
-    font-weight: bold;
+    font-weight: 600;
     text-align: center;
     text-transform: uppercase;
     border: 1px solid;
