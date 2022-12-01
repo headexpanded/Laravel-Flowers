@@ -1,10 +1,10 @@
 @extends('template')
 @section('title')
-    Flowers
+    Users
 @endsection
 @section('content')
     <div style="text-align:center;">
-        <h2>Flowers List</h2>
+        <h2>User List</h2>
         <hr>
     </div>
 
@@ -13,21 +13,21 @@
     @endif
 
     <div class="displayAllFlowers">
-        @if (empty($flowers))
-            return <p>No flowers in db.</p>
+        @if (empty($users))
+            return <p>No users in db.</p>
         @else
-            @foreach ($flowers as $flower)
+            @foreach ($users as $user)
                 <dl>
 
                     <div class="Card">
 
                         <dt class="dt">
-                            <p>Name: {{ $flower->name }}</p>
+                            <p>Name: {{ $user->name }}</p>
                         </dt>
                         <dd class="dd">
-                            <p>Price: {{ $flower->price }}</p>
-                            <p>Available Since: {{ $flower->created_at }}</p>
-                            <p><a href="/flowers/{{ $flower->id }}">Details</a></p>
+                            <p>Email: {{ $user->email }}</p>
+                            <p>Member Since: {{ $user->created_at }}</p>
+                            <p><a href="/users/{{ $user->id }}">User Details</a></p>
                         </dd>
 
 

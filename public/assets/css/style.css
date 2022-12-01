@@ -42,6 +42,10 @@ li {
     border-radius: 16px;
 }
 
+._formInputSubmit:hover {
+    cursor: pointer;
+}
+
 ._divFlowerEditUpdate {
     padding: 16px 0px;
 }
@@ -88,6 +92,7 @@ li {
     display: flex;
     flex-flow: row;
     font-weight: 600;
+    list-style-type: none;
     place-items: center;
     gap: 1.5rem;
     text-transform: uppercase;
@@ -140,25 +145,25 @@ li {
     flex-flow: row;
 }
 
-.flowerCard {
+.Card {
     /* border-bottom: 1px solid #999; */
     box-shadow: 1px 1px #999;
     min-width: 320px;
     padding: 2px 20px;
 }
 
-.flowerCard p {
+.Card p {
     font-size: 1.25rem;
 }
 
-.flowerCard a {
+.Card a {
     text-transform: uppercase;
     font-size: 0.9rem;
     font-weight: 700;
     text-decoration: underline;
 }
 
-.flowerCard:hover {
+.Card:hover {
     box-shadow: 2px 2px #999;
 }
 
@@ -174,6 +179,7 @@ li {
     display: flex;
     flex-flow: row;
     align-items: center;
+    justify-content: space-evenly;
     padding: 0;
     margin: 0;
     gap: 44px;
@@ -182,4 +188,11 @@ li {
 ._flowerDetailNav span {
     padding: 0;
     margin: 0;
+}
+
+._detailNavLinks {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-evenly;
 }

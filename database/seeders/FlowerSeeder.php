@@ -15,18 +15,27 @@ class FlowerSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('flowers')->insert([
+        DB::table('users')->insert([
             [
-                'name' => 'Wild Daisy',
-                'price' => 29.95
+                'name' => 'Sid Vicious',
+                'email' => 'sid@sexpistols.uk',
+                'password' => 'sid123ABC'
+
             ],
             [
-                'name' => 'Climbing Rose',
-                'price' => 64.95
+                'name' => 'Johnny Rotten',
+                'email' => 'johnny@sexpistols.uk',
+                'password' => 'johnny123ABC'
             ],
             [
-                'name' => 'Blue Daisy',
-                'price' => 9.95
+                'name' => 'Steve Cook',
+                'email' => 'steve@sexpistols.uk',
+                'password' => 'steve123ABC'
+            ],
+            [
+                'name' => 'Paul Jones',
+                'email' => 'paul@sexpistols.uk',
+                'password' => 'paul123ABC'
             ]
         ]);
     }

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FlowerController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -29,3 +30,12 @@ Route::get('/flowers/update/{id}', [FlowerController::class, 'editFlowerDetails'
 Route::post('/flowers/update/{id}', [FlowerController::class, 'update']);
 
 Route::get('/flowers/{id}', [FlowerController::class, 'show']);
+
+// user routes
+Route::get('/users', [UserController::class, 'index']);
+
+Route::get('/register', [UserController::class, 'register']);
+
+Route::post('/register', [UserController::class, 'addNewUser']);
+
+Route::get('/users/{id}', [UserController::class, 'show']);

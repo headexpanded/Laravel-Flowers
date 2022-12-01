@@ -9,14 +9,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Flower extends Model
 {
     use HasFactory;
-    // protected $casts = [
-    //     'created_at' => 'datetime:d m yyyy'
-    // ];
-    // protected $dateFormat = 'U';
-
-
-
-
 
     protected function name(): Attribute
     {
@@ -34,19 +26,16 @@ class Flower extends Model
         );
     }
 
-    protected function priceNoSign(): Attribute
+    protected function getPriceNoSignAttribute()
     {
-        return Attribute::make(
-            get: fn ($value) => ($value),
-            set: fn ($value) => ($value),
-        );
+        return $this->attributes['price'];
     }
 
-    protected function created_at(): Attribute
+    protected function createdAt(): Attribute
     {
         return Attribute::make(
 
-            get: fn ($value) => Date('d-m-yyyy', $value),
+            get: fn ($value) => date('d M Y', strtotime($value)),
             set: fn ($value) => ($value),
         );
     }

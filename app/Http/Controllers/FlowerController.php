@@ -70,6 +70,7 @@ class FlowerController extends Controller
         return ($deletedFlower) ? redirect('/flowers')->with('message', '<p style="display:flex; justify-content: center;"><span style="color:green; text-transform: uppercase; font-size: 1.25rem;">   Delete Successful</span></p>') : redirect('/update')->with('message', 'Delete Failed');
     }
 
+
     public function flowerAPI()
     {
         $flowers = Flower::all();
