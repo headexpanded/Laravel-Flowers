@@ -3,8 +3,9 @@
     Users
 @endsection
 @section('content')
-    <div style="text-align:center;">
+    <div class="_pageHeader">
         <h2>User List</h2>
+        <h4>JSON</h4>
         <hr>
     </div>
 
@@ -35,6 +36,7 @@
                     </div>
                 </dl>
             @endforeach
+        @endif
     </div>
-    @endif
+    <div class="_paginate">{{ $users->links() }}</div>
 @endsection

@@ -116,6 +116,13 @@ li {
     text-transform: uppercase;
 }
 
+._pageHeader {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    text-align: center;
+}
+
 .dt {
     font-weight: bold;
     color: rgb(80, 80, 80);

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// flower routes
 Route::get('/', [FlowerController::class, 'index']);
 
 Route::get('/flowers', [FlowerController::class, 'index']);
@@ -34,8 +34,10 @@ Route::get('/flowers/{id}', [FlowerController::class, 'show']);
 // user routes
 Route::get('/users', [UserController::class, 'index']);
 
-Route::get('/register', [UserController::class, 'register']);
+Route::get('/register', [UserController::class, 'create']);
 
-Route::post('/register', [UserController::class, 'addNewUser']);
+Route::post('/register', [UserController::class, 'store']);
 
 Route::get('/users/{id}', [UserController::class, 'show']);
+
+Route::get('/login_form', [UserController::class, 'login']);

@@ -3,8 +3,9 @@
     Flowers
 @endsection
 @section('content')
-    <div style="text-align:center;">
+    <div class="_pageHeader">
         <h2>Flowers List</h2>
+        <li><a href="/api/flowers">JSON</a></li>
         <hr>
     </div>
 

@@ -9,14 +9,14 @@ class FlowerController extends Controller
 {
     public function index()
     {
-        $flowers = Flower::paginate(4);
+        $flowers = Flower::paginate(6);
         return view('flowers', ['flowers' => $flowers]);
     }
 
     public function show($id)
     {
         $flower = Flower::where('id', $id)->first();
-        return response(view('flower-detail', ['flower' => $flower]));
+        return response(view('flower_detail', ['flower' => $flower]));
     }
 
     public function create()

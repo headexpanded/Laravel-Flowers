@@ -23,8 +23,9 @@
                 <li><a href="/flowers">Flowers</a></li>
                 <li><a href="/new-flower">Add New Flower</a></li>
                 <li><a href="/register">Register</a></li>
+                <li><a href="/login_form">Login</a></li>
                 <li><a href="/users">User List</a></li>
-                <li><a href="/api/flowers">JSON</a></li>
+
             </ul>
         </nav>
         @yield('content')
