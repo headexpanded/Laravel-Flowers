@@ -12,7 +12,7 @@
         <div class="alert alert-success">{!! session('message') !!}</div>
     @endif
 
-    <div class="displayAllFlowers">
+    <div class="displayAll">
         @if (empty($users))
             return <p>No users in db.</p>
         @else

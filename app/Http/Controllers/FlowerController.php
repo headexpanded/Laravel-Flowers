@@ -9,7 +9,7 @@ class FlowerController extends Controller
 {
     public function index()
     {
-        $flowers = Flower::all();
+        $flowers = Flower::paginate(4);
         return view('flowers', ['flowers' => $flowers]);
     }
 

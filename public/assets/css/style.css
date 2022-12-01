@@ -84,8 +84,8 @@ li {
 }
 
 .nav {
-    /* border-bottom: 2px solid grey; */
     padding-bottom: 8px;
+    margin: 0;
 }
 
 .navUl {
@@ -96,7 +96,8 @@ li {
     place-items: center;
     gap: 1.5rem;
     text-transform: uppercase;
-    justify-content: space-evenly;
+    justify-content: center;
+    padding: 0;
 }
 
 .main {
@@ -107,6 +108,12 @@ li {
     background-color: whitesmoke;
     border: 1px rgba(58, 223, 113, 0.653) solid;
     border-radius: 16px;
+}
+
+.main h2 {
+    color: rgb(80, 80, 80);
+    font-size: 1.2rem;
+    text-transform: uppercase;
 }
 
 .dt {
@@ -127,13 +134,7 @@ li {
     padding-bottom: 0.5em;
 }
 
-.main h2 {
-    color: rgb(80, 80, 80);
-    font-size: 1.2rem;
-    text-transform: uppercase;
-}
-
-.displayAllFlowers {
+.displayAll {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -175,16 +176,6 @@ li {
     text-transform: uppercase;
 }
 
-._flowerDetailNav {
-    display: flex;
-    flex-flow: row;
-    align-items: center;
-    justify-content: space-evenly;
-    padding: 0;
-    margin: 0;
-    gap: 44px;
-}
-
 ._flowerDetailNav span {
     padding: 0;
     margin: 0;
@@ -194,5 +185,18 @@ li {
     display: flex;
     flex-flow: row;
     align-items: center;
+    justify-content: space-evenly;
+}
+
+._paginate {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    min-width: 800px;
+}
+.pagination {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row;
     justify-content: space-evenly;
 }

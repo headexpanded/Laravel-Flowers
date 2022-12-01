@@ -12,7 +12,7 @@
         <div class="alert alert-success">{!! session('message') !!}</div>
     @endif
 
-    <div class="displayAllFlowers">
+    <div class="displayAll">
         @if (empty($flowers))
             return <p>No flowers in db.</p>
         @else
@@ -37,4 +37,5 @@
             @endforeach
     </div>
     @endif
+    <div class="_paginate">{{ $flowers->links() }}</div>
 @endsection
