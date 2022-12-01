@@ -25,7 +25,8 @@
                             <p>Name: {{ $flower->name }}</p>
                         </dt>
                         <dd class="dd">
-                            <p>Price: $ {{ $flower->price }}</p>
+                            <p>Price: {{ $flower->price }}</p>
+                            <p>Available Since: {{ $flower->created_at }}</p>
                             <p><a href="/flowers/{{ $flower->id }}">Details</a></p>
                         </dd>
 

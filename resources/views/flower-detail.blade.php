@@ -10,16 +10,17 @@
                     <p>{{ $flower->name }}</p>
                 </dt>
                 <dd class="dd">
-                    <p>$ {{ $flower->price }}</p>
+                    <p>{{ $flower->price }}</p>
                 </dd>
-
-                <p><a href="/flowers/update/{{ $flower->id }}">Edit</a></p>
-                <p><a href="/flowers/delete/{{ $flower->id }}">Delete</a></p>
                 <div class="_flowerDetailNav">
                     <p><a href="/flowers"><span class="material-symbols-outlined">
                                 arrow_back
                             </span>Back</a></p>
                 </div>
+
+                <p><a href="/flowers/update/{{ $flower->id }}">Edit</a></p>
+                <p><a href="/flowers/delete/{{ $flower->id }}">Delete</a></p>
+
             </div>
         </dl>
         <div class="_flowerDesc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis id aliquid, ducimus

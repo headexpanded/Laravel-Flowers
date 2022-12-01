@@ -14,7 +14,7 @@
             <label for="name">Change Flower Name</label>
             <input type="text" name="name" value="{{ $flower->name }} "placeholder="{{ $flower->name }}">
             <label for="price">Change Flower Price</label>
-            <input type="text" name="price" value="{{ $flower->price }}"placeholder={{ $flower->price }}>
+            <input type="text" name="price" value="{{ $flower->priceNoSign }}"placeholder={{ $flower->price }}>
             <input class="_formInputSubmit" type="submit" value="Update">
         </form>
         @if ($errors->any())
