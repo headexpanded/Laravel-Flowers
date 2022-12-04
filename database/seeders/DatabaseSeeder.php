@@ -15,7 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         // Call all the seeders you need
         $this->call([
-            FlowerSeeder::class
+            UserSeeder::class
         ]);
     }
 }
