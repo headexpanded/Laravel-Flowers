@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FlowerController;
+use App\Http\Controllers\APIController;
 
 
 /*
@@ -16,7 +16,9 @@ use App\Http\Controllers\FlowerController;
 |
 */
 
-Route::get('/flowers', [FlowerController::class, 'flowerAPI']);
+Route::get('/flowers', [APIController::class, 'index']);
+
+Route::get('/flowers/minprice/{price}', [APIController::class, 'minprice'])->name('minprice');
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

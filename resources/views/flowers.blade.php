@@ -3,11 +3,9 @@
     Flowers
 @endsection
 @section('content')
-    <div class="_pageHeader">
-        <h2>Flowers List</h2>
-        <li><a href="/api/flowers">JSON</a></li>
-        <hr>
-    </div>
+<h2>Flowers List</h2>
+
+    
 
     @if (session('message'))
         <div class="alert alert-success">{!! session('message') !!}</div>

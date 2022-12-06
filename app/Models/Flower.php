@@ -39,4 +39,5 @@ class Flower extends Model
             set: fn ($value) => ($value),
         );
     }
+    
 }

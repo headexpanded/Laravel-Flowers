@@ -25,6 +25,7 @@
 
         <form class="_FlowerForm" method="post">
             @csrf
+            
             <label for="email">Email: </label>
             <input type="email" name="email">
             <label for="password">Password: </label>

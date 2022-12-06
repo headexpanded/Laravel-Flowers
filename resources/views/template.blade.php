@@ -16,18 +16,28 @@
 </head>
 
 <body>
-    <div class="main">
-        <nav class="nav">
-            <ul class="navUl">
-                <li><a href="/flowers">Home</a></li>
-                <li><a href="/flowers">Flowers</a></li>
-                <li><a href="/new-flower">Add New Flower</a></li>
-                <li><a href="/register">Register</a></li>
-                <li><a href="/login_form">Login</a></li>
-                <li><a href="/users">User List</a></li>
-
-            </ul>
+    <nav class="nav">
+        <ul class="navUl">
+            <a href="/flowers">Home</a>
+            <a href="/flowers">Flowers</a>
+            <a href="/new-flower">Add New Flower</a>
+            <a href="/register">Register</a>
+            @if (!session('email'))
+            <a href="/login_form">Login</a>
+            @else
+            <a href="/logout">Logout</a>
+            @endif
+            <a href="/users">User List</a>
+        </ul>
+    </nav>
+    <div class="_jsonNav navUl">
+        <nav>
+        <a href="/api/flowers">JSON-all</a>
+        <a href="{{route('minprice', ['price' => 40])}}">JSON-minprice</a>
         </nav>
+    </div>
+    <hr>
+    <div class="main">
         @yield('content')
     </div>
 

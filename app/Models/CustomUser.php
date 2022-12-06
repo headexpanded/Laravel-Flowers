@@ -41,5 +41,15 @@ class CustomUser extends Model
         $this->attributes['password'] = Hash::make($this->password);
     }
 
+    // protected function admin(): Attribute {
+
+    //     return Attribute::make(
+    //         get: fn ($value)=> ($value)
+    //     );
+    // }
+
+
+
     protected $table = "users";
+
 }

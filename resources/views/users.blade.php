@@ -3,11 +3,9 @@
     Users
 @endsection
 @section('content')
-    <div class="_pageHeader">
+    
         <h2>User List</h2>
-        <h4>JSON</h4>
-        <hr>
-    </div>
+        
 
     @if (session('message'))
         <div class="alert alert-success">{!! session('message') !!}</div>
